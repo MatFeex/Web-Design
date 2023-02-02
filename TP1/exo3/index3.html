@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="keywords" content="EPF">
+        <meta name="description" content="Website TP1">
+        <meta name="author" content="Mathieu Fresson">
+
+        <title>TP1 Exo 3 - Mathieu Fresson</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    </head>
+    <body>
+        <form action="" method="POST" class="form bordered">
+
+            <p class="info">Informations sur un employé</p>
+
+            <div class="first-section">
+                <p>Numéro de sécurité sociale : </p>
+                <input name="social-number" type="number">
+
+                <p>Nom et prénom : </p>
+                <input name="names" type="text">
+
+                <p>Age : </p>
+                <input name="age" type="number">
+                
+                <p>Salaire en DH : </p>
+                <input name="salary" type="text">
+            
+                <p>Grade : </p>
+                <input name="grade" type="text">
+            </div>
+
+            <button class="btn" name="save" type="submit">Enregistrer</button>
+            <button class="btn" name="new" type="submit">Nouveau</button>
+            <button class="btn" name="erase" type="submit">Effacer tous les champs</button>
+
+        </form>
+
+        <div class="second-section bordered">
+            <p class="info">Affichage de la base de donnée</p>
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th>Numéro de sécurité sociale</th>
+                        <th>Nom et prénom</th>
+                        <th>Age</th>
+                        <th>Salaire en DH</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123456789</td>
+                        <td>Mathieu FRESSON</td>
+                        <td>21</td>
+                        <td>2000</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>987654321</td>
+                        <td>Mathiew Jonhson</td>
+                        <td>22</td>
+                        <td>2200</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </body>
+</html>

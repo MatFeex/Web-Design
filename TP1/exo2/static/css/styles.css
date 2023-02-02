@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+
+:root {
+    --color-main: #325f8b68;
+    --color-light: #dcdcdc;
+    --color-gray: #8b8b8b84;
+}
+
+/* Entete */
+.header{
+    width: 100%;
+    max-height: 7em;
+}
+
+/* Container principal */
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: auto;
+    margin: 1em 0 2em 0;
+}
+
+/* Tableau - barre de navigation */
+
+.navbar{
+    width: 100%;
+    max-height: 1em;
+    background-color: var(--color-main);
+    border: 1px solid var(--color-light);
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-family: Poppins;
+    font-weight: lighter;
+}
+.navbar th{
+    border-bottom: 1px solid var(--color-light);
+
+}
+
+/* Section principal */
+.content{
+    max-width: 90%;
+    margin: auto;
+    padding: 2em;
+    border: 1px solid var(--color-gray);
+}
+
+
+/* Pied de page  */
+footer img{
+    width: 100%;
+    max-height: 1.5em;
+    bottom:0;
+    position: fixed;
+}

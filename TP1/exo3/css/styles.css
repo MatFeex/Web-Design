@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+
+:root {
+    --color-main: #3872ac;
+    --color-btn: #21a1cf;
+    --color-gray: #8b8b8b84;
+    --color-light-blue:#21a1cf8a;
+}
+
+.bordered{
+    border: 2px solid var(--color-gray);
+    margin: auto;
+    max-width: 50em;
+}
+
+.info{
+    position: absolute;
+    padding:.5em;
+    background-color: white;
+    margin-top: -2.5em;
+    margin-left: 1em;
+    font-family: Poppins;
+    color: var(--color-main);
+}
+
+/* Premiere section */
+.form{
+    margin-top: 5%;
+    padding: 1em;
+}
+.first-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 1em;
+}
+.first-section p{
+    margin-top: .2em;
+}
+.first-section input{
+    max-height: 1em;
+    padding : .5em;
+}
+
+button{
+    background-color: var(--color-btn);
+    font-family: Poppins;
+    border: 1px solid var(--color-gray);
+    border-radius: .5em;
+    font-size: .8em;
+    margin: .1em;
+    padding:.5em;
+}
+
+
+/* Seconde section */
+.second-section{
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.tab{
+    width: 100%;
+    text-align: center;
+}
+.tab th{
+    border: 1px solid var(--color-main);
+    background-color: var(--color-light-blue);
+}
