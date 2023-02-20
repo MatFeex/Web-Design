@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>TP2 - Exo 1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+      :root {
+        --color-main: #3872ac;
+        --color-btn: #21a1cf;
+        --color-gray: #8b8b8b84;
+        --color-light-blue: #21a1cf8a;
+      }
+      body {
+        font-family: Poppins;
+      }
+      .container {
+        margin: auto;
+        width: 80%;
+        margin-top: 10em;
+      }
+      fieldset {
+        border-color: var(--color-main);
+      }
+      legend {
+        color: var(--color-main);
+      }
+      input {
+        border: 1px solid var(--color-btn);
+        border-radius: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      #CAL {
+        background-color: var(--color-btn);
+        font-family: Poppins;
+        border: 1px solid var(--color-gray);
+        border-radius: 0.5em;
+        font-size: 0.8em;
+        margin: 0.1em;
+        padding: 0.5em;
+        margin: 0.5em;
+      }
+      #PU {
+        padding: 0.3em;
+      }
+      #TVA {
+        padding: 0.3em;
+      }
+      #QT {
+        padding: 0.3em;
+      }
+      #PT {
+        padding: 0.3em;
+      }
+    </style>
+    <script language="javascript">
+      function Calculer_PrixTTC() {
+        var Champ_Texte_PU;
+        var Champ_Texte_TVA;
+        var Champ_Texte_QT;
+        var Champ_Texte_PTTC;
+        var Prix_Unitaire;
+        var Taux_TVA;
+        var Quantite;
+        var Prix_TTC;
+        Champ_Texte_PU = document.getElementById("PU");
+        Champ_Texte_TVA = document.getElementById("TVA");
+        Champ_Texte_QT = document.getElementById("QT");
+        Champ_Texte_PTTC = document.getElementById("PT");
+        Prix_Unitaire = parseFloat(Champ_Texte_PU.value);
+        Taux_TVA = parseFloat(Champ_Texte_TVA.value);
+        Quantite = parseFloat(Champ_Texte_QT.value);
+        Prix_TTC =
+          Prix_Unitaire * Quantite +
+          (Prix_Unitaire * Quantite * Taux_TVA) / 100;
+        Champ_Texte_PTTC.value = Prix_TTC;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <legend>Calcul du Prix TTC</legend>
+        Prix unitaire HTC :
+        <br />
+        <input type="text" size="20" id="PU" />
+        <br />
+        Taux TVA :
+        <br />
+        <input type="text" size="20" id="TVA" />
+        <br />
+        Quantité :
+        <br />
+        <input type="text" size="20" id="QT" />
+        <br />
+        <input
+          id="CAL"
+          type="button"
+          value="Calculer"
+          Onclick="Calculer_PrixTTC();"
+        />
+        <br />
+        Prix TTC :
+        <br />
+        <input type="text" size="20" id="PT" />
+      </fieldset>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="EPF" />
+    <meta name="description" content="Website TP1" />
+    <meta name="author" content="Mathieu Fresson" />
+
+    <title>TP2 Exo 2 - Mathieu Fresson</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="" />
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css" />
+
+    <!-- Import FontAwesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <img class="logo" src="static/img/epf_logo_new.png" alt="EPF Logo" />
+    <div class="navbar">
+      <div class="container">
+        <nav>
+          <ul class="first-nav">
+            <li>
+              <a class="home" href="#"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li><a class="brd-l" href="#">Intégration HTML</a></li>
+            <li><a class="brd-l" href="#">CSS</a></li>
+            <li><a class="brd-l" href="#">Javascript</a></li>
+            <li><a class="brd-l" href="#">Php</a></li>
+            <li><a class="brd-l" href="#">Autres ...</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script language="javascript">
+      function multiply() {
+        var field_number1;
+        var field_number2;
+        var field_total;
+        var number1;
+        var number2;
+        var total;
+        field_number1 = document.getElementById("N1");
+        field_number2 = document.getElementById("N2");
+        field_total = document.getElementById("TOT");
+        number1 = field_number1.value;
+        number2 = field_number2.value;
+        total = number1 * number2;
+        field_total.value = total;
+      }
+    </script>
+
+    <fieldset>
+      <legend>Multiplication :</legend>
+      Nombre 1 :
+      <br />
+      <input type="number" id="N1" />
+      <br />
+      Nombre 2 :
+      <br />
+      <input type="number" id="N2" />
+      <br />
+      <input id="CAL" type="button" value="Calculer" Onclick="multiply();" />
+      <br />
+      Résultat :
+      <br />
+      <input type="number" id="TOT"/>
+    </fieldset>
+  </body>
+</html>

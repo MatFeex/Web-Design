@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="EPF" />
+    <meta name="description" content="Website TP1" />
+    <meta name="author" content="Mathieu Fresson" />
+
+    <title>TP1 Exo 1- Mathieu Fresson</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="" />
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css" />
+
+    <!-- Import FontAwesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <img class="logo" src="static/img/epf_logo_new.png" alt="EPF Logo" />
+    <div class="navbar">
+      <div class="container">
+        <nav>
+          <ul class="first-nav">
+            <li>
+              <a class="home" href="#"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li><a class="brd-l" href="#">Intégration HTML</a></li>
+            <li><a class="brd-l" href="#">CSS</a></li>
+            <li><a class="brd-l" href="#">Javascript</a></li>
+            <li><a class="brd-l" href="#">Php</a></li>
+            <li><a class="brd-l" href="#">Autres ...</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+        <center>
+            <img
+            id="myImage"
+            src="static/img/bitcoin.jpeg"
+            width="400"
+            height="300"
+            style="border: 1px solid black"
+          />
+        </center>
+
+    
+      <div class="properties">
+        <p>Bordure : </p>
+        <input type="text" id="borderInput" value="1" />
+        <p>Largeur : </p>
+        <input type="text" id="widthInput" value="400" />
+        <p>Hauteur : </p>
+        <input type="text" id="heightInput" value="300" />
+        <p>Nom de l'image : </p>
+        <input type="text" id="nameInput" value="bitcoin.jpeg" />
+        <p>Source : </p>
+        <input type="text" id="srcInput" value="static/img/bitcoin.jpeg" />
+        <button onclick="readImageProperties()">Lire Propriétés</button>
+        <button onclick="writeImageProperties()">Ecrire Propriétés</button>
+  
+      </div>
+      
+
+      <script>
+        function readImageProperties() {
+          var img = document.getElementById("myImage");
+          var border = img.style.borderWidth;
+          var width = img.width;
+          var height = img.height;
+          var name = document.getElementById("nameInput").value;
+          var src = document.getElementById("srcInput").value;
+          document.getElementById("borderInput").value = border;
+          document.getElementById("widthInput").value = width;
+          document.getElementById("heightInput").value = height;
+          document.getElementById("nameInput").value = name;
+          document.getElementById("srcInput").value = src;
+        }
+
+        function writeImageProperties() {
+          var img = document.getElementById("myImage");
+          var border = document.getElementById("borderInput").value;
+          var width = document.getElementById("widthInput").value;
+          var height = document.getElementById("heightInput").value;
+          var name = document.getElementById("nameInput").value;
+          var src = document.getElementById("srcInput").value;
+          img.style.borderWidth = border + "px";
+          img.width = width;
+          img.height = height;
+          img.setAttribute("alt", name);
+          img.src = src;
+        }
+      </script>
+    </div>
+  </body>
+</html>

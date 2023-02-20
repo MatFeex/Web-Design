@@ -1,0 +1,106 @@
+:root {
+    --color-main: #3e44b3b9;
+    --color-light: #c4c1c1;
+    --color-gray: #8b8b8b84;
+    --color-btn: #21a1cf;
+    --color-light-blue: #21a1cf8a;
+}
+
+.logo {
+    width: 15em;
+}
+
+.home {
+    border-left: none;
+}
+
+/* Bar de navigation */
+
+.navbar {
+    padding: 1em;
+}
+
+.navbar .container {
+    display: grid;
+}
+
+.navbar nav {
+    display: flex;
+    background: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+
+.navbar nav ul a {
+    color: black;
+    font-size: 1em;
+    padding: 0.1em 1em;
+}
+
+.navbar nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.first-nav {
+    background-color: var(--color-main);
+    border: 1px solid var(--primary-color);
+    border-radius: 5em;
+    width: 100%;
+    padding: .5em;
+}
+
+
+/* Optimise l'affichage sur petits écrans */
+@media screen and (max-width: 728px) {
+    .subject .container ul {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+
+/* Fenetre de calcul */
+
+.container-headers{
+    margin: auto;
+    width: 10em;
+    margin-bottom: 2em;
+}
+
+fieldset {
+    margin: auto;
+    border-color: var(--color-main);
+    width: 0;
+}
+
+legend {
+    color: var(--color-main);
+}
+
+input {
+    border: 1px solid var(--color-btn);
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.3em;
+}
+
+#CAL {
+    background-color: var(--color-btn);
+    font-family: Poppins;
+    border: 1px solid var(--color-gray);
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    margin: 0.1em;
+    padding: 0.5em;
+    margin: 0.5em;
+}

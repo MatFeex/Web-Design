@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="EPF" />
+    <meta name="description" content="Website TP1" />
+    <meta name="author" content="Mathieu Fresson" />
+
+    <title>TP2 Exo 3 - Mathieu Fresson</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="" />
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css" />
+
+    <!-- Import FontAwesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <img class="logo" src="static/img/epf_logo_new.png" alt="EPF Logo" />
+    <div class="navbar">
+      <div class="container">
+        <nav>
+          <ul class="first-nav">
+            <li>
+              <a class="home" href="#"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li><a class="brd-l" href="#">Intégration HTML</a></li>
+            <li><a class="brd-l" href="#">CSS</a></li>
+            <li><a class="brd-l" href="#">Javascript</a></li>
+            <li><a class="brd-l" href="#">Php</a></li>
+            <li><a class="brd-l" href="#">Autres ...</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h5>Composez votre menu :</h5>
+      <div class="menu">
+        <div>
+          <label for="entry">Entrée :</label>
+          <select id="entry-choice">
+            <option value="4">Carottes râpées</option>
+            <option value="2">Légumes d'hiver</option>
+            <option value="5">Avocats</option>
+          </select>
+        </div>
+        <div>
+          <label for="dish">Plat :</label>
+          <select id="dish-choice">
+            <option value="5">Tartar de bar au gingembre</option>
+            <option value="3">Salade composées</option>
+            <option value="7">Raviolis</option>
+          </select>
+        </div>
+        <div>
+          <label for="dessert">Dessert :</label>
+          <select id="dessert-choice">
+            <option value="8">Pancakes</option>
+            <option value="9">Tartes aux pommes</option>
+            <option value="1">Salade de fruits</option>
+          </select>
+        </div>
+        <input id="CHOOSE" type="button" value="Choisir" Onclick="choose();" />
+      </div>
+      <br>
+      <hr>
+
+      <h5>Montant à payer :</h5>
+
+      <div class="bill">
+        <p>Entrée :</p>
+        <p id="entry">5 €</p>
+        <p>Plat :</p>
+        <p id="dish">3 €</p>
+        <p>Dessert :</p>
+        <p id="dessert">10 €</p>
+      </div>
+
+      <hr>
+
+      <div class="total">
+        <h5>Total :</h5>
+        <p id="total">22 €</p>
+      </div>
+
+
+    </div>
+
+    <script language="javascript">
+      function choose() {
+        var entry_choice =  parseFloat(document.getElementById("entry-choice").value);
+        var dish_choice =  parseFloat(document.getElementById("dish-choice").value);
+        var dessert_choice = parseFloat(document.getElementById("dessert-choice").value);
+
+        document.getElementById("entry").innerHTML = entry_choice + " €";
+        document.getElementById("dish").innerHTML = dish_choice + " €";
+        document.getElementById("dessert").innerHTML = dessert_choice + " €";
+        document.getElementById("total").innerHTML = (entry_choice + dish_choice + dessert_choice) + " €";
+
+      }
+    </script>
+
+    
+  </body>
+</html>
